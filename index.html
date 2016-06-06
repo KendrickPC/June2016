@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Object Oriented Javascript Project</title>
+    <link href="css/style.css" rel="stylesheet"><!-- Google Fonts Link -->
+    <!-- Candals Font -->
+    <link href="https://fonts.googleapis.com/css?family=Candal" rel=
+    "stylesheet" type="text/css"><!-- Shadow into light -->
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light"
+    rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Adding a function to allow the choice of my own players. Must update the player file in the engine.js and app.js file lines xx and xx.  -->
+<div class="menuBox">
+    <div id="oaklandRaidersQuarterback">
+        <h3>Choose your Hero</h3>
+        <form id="myForm" name="myForm">
+            <span><input checked name="user" type="radio" value="0">Boy <input name=
+            "user" type="radio" value="1">CatGirl <input name="user" type=
+            "radio" value="2">HornGirl <input name="user" type="radio" value=
+            "3">PinkGirl <input name="user" type="radio" value=
+            "4">PrincessGirl</span>
+        </form>
+    </div>
+    <br>
+    <div id="btn">
+<!-- Runs on app.js gameReset function located on line #173 -->
+        <input onclick="gameReset()" type="button" value="Start Over">
+    </div>
+
+
+
+    <!-- Install JQuery -->
+    <!-- I installed JQuery through the following link AFTER I installed bower. I opened terminal, typed cd and then dropped the folder into my terminal. I then proceeded to install Jquery with a Bower install Jquery command. THen I dropped the JQUERY file into my js folder for the frogger project.  --><!-- https://jquery.com/download/ -->
+    <script src="js/jQuery.js">
+    </script> 
+    <script src="js/resources.js">
+    </script> 
+    <script src="js/app.js">
+    </script> 
+    <script src="js/engine.js">
+    </script>
+
+</div>
+<!-- closes div menuBox -->
+
+</body>
+</html>
