@@ -18,10 +18,10 @@ var Enemy = function(EnemyX, EnemyY, speed) {
     this.x = EnemyX;
     this.y = EnemyY;
     this.speed = speed;
-        // Variables applied to each of our instances go here,
-        // we've provided one for you to get started
-        // The image/sprite for our enemies, this uses
-        // a helper we've provided to easily load images
+    // Variables applied to each of our instances go here,
+    // we've provided one for you to get started
+    // The image/sprite for our enemies, this uses
+    // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 };
 // Update the enemy's position, required method for game
@@ -116,9 +116,12 @@ Player.prototype.handleInput = function(key) {
     }
 };
 Player.prototype.resetPosition = function() {
-    this.x = 200; // 200
-    this.y = 392; // 392
+    player.x = player_Initial_Start_X;
+    player.y = player_Initial_Start_Y;
+    player.sprite = spriteRefresh();
+    player.name = nameRefresh();
 };
+
 // Instantiate the objects.
 // all enemy objects are placed in an array called allEnemies
 var allEnemies = [];
@@ -138,8 +141,6 @@ document.addEventListener('keyup', function(e) {
     };
     player.handleInput(allowedKeys[e.keyCode]);
 });
-
-
 
 // Allows character selection on the HTML sheet 
 // Helper functions returns the sprite selected by the user
@@ -170,13 +171,9 @@ var nameRefresh = function() {
     if (selected === '3') return 'Pink Girl';
     if (selected === '4') return 'Princess Girl';
 };
+
 // Variable GameReset is linked to index.html line #32
-var gameReset = function() {
-    player.x = player_Initial_Start_X;
-    player.y = player_Initial_Start_Y;
-    player.sprite = spriteRefresh();
-    player.name = nameRefresh();
-};
+var gameReset = Player.prototype.resetPosition;
 
 // Using jQuery for logging click locations. Data shows up in developer mode console. 
 // Put the jquery file in the JS folder
